@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring MVC App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: #2b2b3b;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            text-align: center;
+            width: 350px;
+        }
+        h2 {
+            color: #89b4fa;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #a6adc8;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 8px 4px;
+            border: none;
+            background-color: #89b4fa;
+            color: #11111b;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover {
+            background-color: #b4befe;
+        }
+        .reset-btn {
+            background-color: #f38ba8;
+            color: #11111b;
+        }
+        .reset-btn:hover {
+            background-color: #f5c2e7;
+        }
+        .count-display {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #a6e3a1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Spring MVC Dashboard</h2>
+    <p>Welcome to the custom web application!</p>
+    
+    <div class="count-display" id="counter">0</div>
+    
+    <button onclick="increase()">Increment</button>
+    <button class="reset-btn" onclick="reset()">Reset</button>
+</div>
+
+<script>
+    let count = 0;
+    function increase() {
+        count++;
+        document.getElementById('counter').innerText = count;
+    }
+    function reset() {
+        count = 0;
+        document.getElementById('counter').innerText = count;
+    }
+</script>
+
+</body>
+</html>
